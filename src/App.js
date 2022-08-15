@@ -1,30 +1,18 @@
-import React from 'react';
-import Header from './components/Header';
-import Contents from './components/Contents';
-import TagHeader from './components/TagHeader';
-import styled from 'styled-components';
+import { Route, Routes } from 'react-router-dom';
+import About from './components/About';
+import Home from './components/Home';
+import Posting from './components/Posting';
 
 function App() {
   return (
     <>
-      <Header />
-      <TagHeader />
-      <Contents />
-      <Contents />
-      <Footer>
-        @ruraeru, Built with React
-      </Footer>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/development-studying-ts' element={<Posting />} />
+      </Routes>
     </>
   );
 }
-
-const Footer = styled.footer`
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 56px;
-   height: 112px;
-   background-color: rgb(240, 240, 240);
-`;
 
 export default App;

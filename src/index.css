@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  /* border: solid red 1px;
+  padding: 5px; */
+  @font-face {
+    src: url("./fonts/Ubuntu-Regular.ttf");
+  }
 }
 
 body {
@@ -10,6 +15,101 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  word-break: keep-all;
+}
+
+.tags > li {
+  display: inline-flex;
+  align-items: center;
+  text-align: left;
+  font-weight: bold;
+  border: solid 3px #4470ff;
+  padding: 0px 5px 0px 5px;
+  font-size: 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 5px;
 }
 
 code {
