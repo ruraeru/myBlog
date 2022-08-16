@@ -10,10 +10,11 @@ const ContentsCard = ({ Imgurl, title, description, tags }) => {
                 <div id="contentsText">
                     <Daydiv>
                         <ul className="tags">
-                            <li>#TS</li>
-                            <li>#Dev</li>
-                            <li>#JS</li>
-                            <li>#PJ</li>
+                            {tags && tags.map((item, index) => {
+                                return (
+                                    <li key={index}>{item}</li>
+                                )
+                            })}
                         </ul>
                         <div>
                             <p>2022-08-11</p>

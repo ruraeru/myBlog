@@ -9,7 +9,6 @@ const Home = () => {
             <Header />
             <TagHeader />
             <Contents />
-            <Contents />
             <Footer />
         </>
     )
