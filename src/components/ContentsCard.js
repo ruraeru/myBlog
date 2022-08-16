@@ -10,11 +10,6 @@ const ContentsCard = ({ Imgurl, title, description, tags }) => {
                 <div id="contentsText">
                     <Daydiv>
                         <ul className="tags">
-                            {/* {tags.map((item, index) => {
-                                return (
-                                    <li id={index}>#{item}</li>
-                                )
-                            })} */}
                             <li>#TS</li>
                             <li>#Dev</li>
                             <li>#JS</li>
@@ -42,50 +37,69 @@ const ContentsCard = ({ Imgurl, title, description, tags }) => {
 
 const Img = styled.img`
    width: 100%;
-   border-radius: 20px 20px 0px 0px;
+   /* min-height: 100%; */
+   /* min-height: 312px; */
    /* height: 204px; */
-   min-height: 100%;
+   min-height: 164px;
    max-height: 204px;
+
+   border-radius: 20px 20px 0px 0px;
 `;
 
 const Div = styled.div`
-   margin: 56px 40px 0px 40px;
    display: flex;
+   border: 1px solid hsla(0,0%,0%,0.07);
+   margin: 56px 40px 0px 40px;
    .solid {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
    }
-   max-width: 312px;
    width: 312px;
-   height: 100%;
+   max-width: 312px;
+   
+   /* height: 100%; */
+   min-height: 300px;
+   max-height: 300px;
    text-align: center;
+   
    border-radius: 20px;
+   
    #title {
     height: 100px;
-    text-align: left;
+    
     margin-top: 10px;
     margin-left: 20px;
+    
+    text-align: left;
+    
     .description {
         margin-top: 10px;
-        color: #adb5bd;
+
         font-size: 14px;
+        color: #adb5bd;
+        }
     }
-   }
    #contentsText {
+
    }
 `;
 
 const Daydiv = styled.div`
    display: flex;
    justify-content: space-around;
-   font-size: 12px;
+   
    margin-top: 3px;
+   
+   font-size: 12px;
+   
    .tags {
     padding: 0;
    }
+
    li {
-    font-weight: bold;
     font-size: 10px;
+    font-weight: bold;
+    
     border: solid 3px #FBCB43;
    }
 `

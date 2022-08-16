@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import Home from './components/Home';
-import Posting from './components/Posting';
+import Posting from './components/Post';
 
 function App() {
   return (

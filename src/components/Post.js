@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import Footer from "./Footer";
 import Header from "./Header";
 
-const Posting = () => {
+const Post = () => {
     return (
         <>
             <Header />
@@ -15,6 +16,13 @@ const Posting = () => {
                     </ul>
                 </PostingHeader>
                 <Content>
+                    {/* 
+                    <h1>제목</h1>
+                    <p>
+                        <h3>소제목</h3>
+                        텍스트
+                    </p>
+                    */}
                     <figure>
                         <span>
                             <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="coding" />
@@ -69,12 +77,22 @@ const Posting = () => {
                         자바스크립트 기반인 앵귤러 버전 1과 달리 버전 2부터는 타입스크립트 기반으로 만들어졌고 타입스크립트를 권장하고 있습니다.
                     </p>
                     <h1>출처</h1>
-                    <p>
+                    {/* <p>
                         <code><a href="https://www.samsungsds.com/kr/insights/typescript.html">SAMSUNG SDS</a></code>
-                    </p>
-                    <img src="https://images.unsplash.com/photo-1551847609-5aaf21a58ebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="talking" />
+                    </p> */}
+                    <figure>
+                        <span>
+                            <img src="https://image.samsungsds.com/kr/insights/typescript_top_img.jpg?queryString=20220721035459" alt="samsungSDS-TS" />
+                        </span>
+                        <figcaption>
+                            <a href="https://www.samsungsds.com/kr/insights/typescript.html">SAMSUNG SDS</a>
+                            {/* <code>
+                            </code> */}
+                        </figcaption>
+                    </figure>
                 </Content>
             </Div>
+            <Footer />
         </>
     );
 };
@@ -82,92 +100,102 @@ const Posting = () => {
 const Div = styled.div`
    margin: 0 auto;
    width: 700px;
-
 `;
 
 const PostingHeader = styled.div`
+   display: flex;
+   flex-direction: column;
+   width: 700px;
+   max-width: 700px;
+   height: 150px;
+   
+   margin: 0 auto;
+   margin-top: 39px;
+   margin-bottom: 2rem;
+   
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+   border-image: linear-gradient(to right, rgb(68, 112, 255), rgb(138, 83, 255)) 1 / 1 / 0 stretch;
    p {
     font-size: 14px;
    }
-   * {
-       /* border: solid red 1px; */
-       /* padding: 5px; */
-    }
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-top: 39px;
-    max-width: 700px;
-    width: 700px;
-    height: 150px;
-    
-    border-image: linear-gradient(to right, rgb(68, 112, 255), rgb(138, 83, 255)) 1 / 1 / 0 stretch;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    margin-bottom: 2rem;
-   .tags {
+    .tags {
     margin-top: 10px;
     padding: 0;
    }
 `;
 
 const Content = styled.div`
-   text-align: left;
-   figure {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 0.8125rem;
-    
-    figcaption {
-
-        margin-top: -20px;
-        text-align: center;
-        color: rgb(119, 119, 119);
-        font-size: 12px;
-    }
-   }
-   font-size: 16px;
-   font-weight: bold;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+
+   font-size: 16px;
+   font-weight: bold;
+   text-align: left;
+
+   figure {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.8125rem;
+    figcaption {
+        font-size: 12px;
+        text-align: center;
+        color: rgb(119, 119, 119);
+        margin-top: -20px;
+        }
+    }
    code {
-    font-weight: inherit;
-    font-size: 16px;
-    border-radius: 4px;
+    font-size: 18px;
+    /* font-weight: inherit; */
+    font-weight: bold;
+    
     padding: 1.5px 4px;
+    
+    border-radius: 4px;
     background-color: rgba(68, 112, 255, 0.4);
-   }
+    }
    h1 {
-       width: 700px;
-       margin: 0;
-       margin-top: 2.4375rem;
-       padding-bottom: calc(0.40625rem - 1px);
-       padding: 0;
-       margin-bottom: 19.5px;
-       font-family: Gothic A1;
-       font-weight: 800;
-       font-size: 32px;
-       line-height: 1.3;
-       border-bottom: 1px solid hsla(0,0%,0%,0.07);
-    }
-    p {
-        margin-bottom: 0.8125rem;
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        /* font-kerning: normal; */
-        line-height: 1.7;
-        width: 700px;
-        font-weight: 500;
-    }
+    width: 700px;
+    
+    margin: 0;
+    margin-top: 2.4375rem;
+    margin-bottom: 19.5px;
+    
+    padding: 0;
+    padding-bottom: calc(0.40625rem - 1px);
+    
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.07);
+    
+    font-size: 32px;
+    font-family: Gothic A1;
+    font-weight: 800;
+    
+    line-height: 1.3;
+   }
+
+   p {
+    /* display: block; */
+    width: 700px;
+    
+    margin-bottom: 13px;
+    margin-block-start: 16px;
+    margin-block-end: 16px;
+    
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+    font-weight: 500;
+    line-height: 1.7;
+    /* font-kerning: normal; */
+   }    
    img {
     /* width: 700px; */
+    max-width: 700px;
+    
     margin-bottom: 20px;
-   }
+    }
 `;
 
-export default Posting;
+export default Post;

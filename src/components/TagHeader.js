@@ -16,9 +16,10 @@ const TagHeader = () => {
 const HeaderDiv = styled.div`
    display: flex;
    align-items: center;
+   
+   height: 70px;
 
    list-style: none;
-   height: 70px;
    /* background-color: #FBCB43; */
    background-color: #fab005;
 `;

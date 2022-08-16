@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
+    const onClick = (e) => {
+        console.log(e);
+    }
     return (
         <HeaderDiv>
             <div className="logo">
@@ -11,26 +14,29 @@ const Header = () => {
                 <p>Share</p>
                 <p>About</p>
                 <div className="dark-mode">
-                    <button>W/D</button>
+                    <button onClick={onClick}>W/D</button>
                 </div>
             </div>
         </HeaderDiv >
     );
 }
 
-const HeaderDiv = styled.div`
+const HeaderDiv = styled.header`
    display: flex;
    text-align: center;
    align-items: center;
+   justify-content: space-between;
+
    height: 56px;
-   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
    padding: 20px;
    background-color: white;
-   justify-content: space-between;
+   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+   
    a {
     text-decoration: none;
     color: #fab005;
    }
+   
    .logo {
     /* flex: 1; */
     text-align: left;
@@ -47,7 +53,7 @@ const HeaderDiv = styled.div`
 
    .link {
     display: flex;
-   }
+    }
 
    .link > p {
     margin-right: 20px;
