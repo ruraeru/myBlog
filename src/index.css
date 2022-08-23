@@ -110,7 +110,8 @@ video {
   padding: 0px 5px 0px 5px;
   font-size: 12px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background-color: white;
   margin-right: 5px;
 }
 

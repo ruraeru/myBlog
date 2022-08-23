@@ -5,12 +5,12 @@ import TagHeader from './TagHeader';
 
 const Home = () => {
     return (
-        <>
+        <div>
             <Header />
             <TagHeader />
-            <Contents />
+            {/* <Contents /> */}
             <Footer />
-        </>
+        </div>
     )
 };
 
