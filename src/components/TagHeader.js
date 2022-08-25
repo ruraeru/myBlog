@@ -3,23 +3,23 @@ import styled from "styled-components";
 import Contents from "./Contents";
 
 const TagHeader = () => {
-    const [select, setSelect] = useState([]);
+    const [select, setSelect] = useState("");
     const onClick = (e) => {
-        select.map((item) => (e.target.textContent === item ? null : setSelect(currentArray => [e.target.textContent, ...currentArray])))
-        console.log(e.target.textContent, select);
+        setSelect(e.target.textContent);
+        e.target.className = "hide";
     }
-    console.log(select);
+    // console.log(select);
     return (
         <>
             <HeaderDiv>
                 <ul className="tags">
-                    <li onClick={onClick}>#TypeScript</li>
-                    <li onClick={onClick}>#JavaScript</li>
+                    <li onClick={onClick}>#TS</li>
+                    <li onClick={onClick}>#JS</li>
                     <li onClick={onClick}>#Dev</li>
-                    <li onClick={onClick}>#ProJect</li>
+                    <li onClick={onClick}>#PJ</li>
                 </ul>
             </HeaderDiv>
-            <Contents />
+            <Contents selectTags={select} />
         </>
     );
 };

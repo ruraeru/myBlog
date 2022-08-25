@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
-const ContentsCard = ({ Imgurl, title, description, tags }) => {
+const ContentsCard = ({ Imgurl, title, description, tags, select }) => {
+    // console.log(tags, tags.indexOf(select), select);
+
+    if (select) {
+        if (tags.indexOf(select) !== -1) {
+            const div = document.querySelectorAll('.card');
+            for (let i = 0; i < div.length; i++) {
+                if (div[i].className.indexOf("hide") === -1) {
+                    div[i].classList.add("hide");
+                }
+            }
+            console.log(div);
+        }
+    }
     return (
-        <Div>
+        <Div className="card">
             <div className="solid">
                 <div>
                     <Img src={Imgurl} />
@@ -48,6 +62,9 @@ const Img = styled.img`
 `;
 
 const Div = styled.div`
+   .hide {
+    display: none;
+   }
    display: flex;
    border: 1px solid hsla(0,0%,0%,0.07);
    margin: 56px 40px 0px 40px;
