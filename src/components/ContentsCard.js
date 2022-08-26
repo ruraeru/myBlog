@@ -6,7 +6,7 @@ const ContentsCard = ({ select }) => {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        setList(Contents);
+        setList(Contents.datas);
     }, []);
 
     const mapToComponents = (datas) => {

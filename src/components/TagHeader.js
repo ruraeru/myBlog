@@ -7,7 +7,7 @@ const TagHeader = () => {
     const [select, setSelect] = useState("");
     const [list, setList] = useState([]);
     useEffect(() => {
-        setList(Data);
+        setList(Data.tags);
     }, []);
     const onClick = (e) => {
         setSelect(e.target.value);
@@ -17,10 +17,8 @@ const TagHeader = () => {
         <>
             <HeaderDiv>
                 <ul className="tags">
-                    {list.map((data) => (
-                        data.tags.map((tag, index) => (
-                            <button key={index} onClick={onClick} value={tag}>#{tag}</button>
-                        ))
+                    {list.map((tag, index) => (
+                        <button key={index} onClick={onClick} value={tag}>#{tag}</button>
                     ))}
                 </ul>
                 {/* <ul className="tags">
