@@ -101,7 +101,8 @@ video {
   word-break: keep-all;
 }
 
-.tags > li {
+.tags > li,
+button {
   display: inline-flex;
   align-items: center;
   text-align: left;
